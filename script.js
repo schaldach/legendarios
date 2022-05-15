@@ -16,7 +16,8 @@ function add(){
             subindex: index,
             subtime: time,
             subfinaltime: finaltime,
-            subtext: text
+            subtext: text,
+            subnumber: totaltime
         }
     )
     document.getElementById("time").value = finaltime
@@ -24,9 +25,19 @@ function add(){
     update()
 }
 
+function compare(a,b){
+    return a.subnumber - b.subnumber
+}
+
 function update(){
     let column = document.getElementById("column")
     column.innerHTML = ""
+    if(textList.length>=2){
+        textList.sort(compare)
+        for(i=0; i<textList.length; i++){
+            textList[i].subindex = i
+        }
+    }
     textList.forEach(subtitle => {
         let centraldiv = document.createElement("div")
         centraldiv.setAttribute("class", "divgrid")
