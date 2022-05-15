@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Projeto Legendários</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="title">Projeto Legendários</div>
+            <div class="description">O nosso trabalho tem como objetivo fazer um site, com o intuito de ajudar as pessoas a produzir legendas em conteúdos audiovisuais. <br><br> Tutorial: Para organizar suas legendas o nosso site terá duas caixas de texto, a caixa presente na parte esquerda será para você colocar seu texto, já a parte da direita será utilizada para que você coloque o tempo inicial e final do momento em que se deve aparecer a legenda no vídeo. Com isso, depois que você já decidiu os dois tópicos, clique em adicionar trecho, e logo em sequência a legenda aparecerá em uma tabela abaixo.</div>
+        </section>
+        <section>
+            <div class="inputs">
+                <input placeholder="Texto da legenda" type="text" id="text">
+                <input placeholder="Tempo inicial (00:00:00)" type="text" id="time">
+                <input placeholder="Duração (segundos)" type="number" id="addtime">
+                <button onclick="add()">Adicionar trecho</button>
+            </div>
+            <div class="display" id="column">
+                <div>Nada por enquanto...</div>
+            </div>
+            <button onclick="reset()">Resetar</button>
+        </section>
+    </main>
+</body>
+</html>
